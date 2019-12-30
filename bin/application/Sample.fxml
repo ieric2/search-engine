@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <SplitPane dividerPositions="0.225752508361204" orientation="VERTICAL" prefHeight="770.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="238.0" prefWidth="998.0">
+               <children>
+               	  <TextField layoutX = "0" layoutY = "0" opacity = "0"/>
+                  <TextField fx:id="diagnosisCategory" layoutX="14.0" layoutY="25.0" text="" />
+                  <TextField fx:id="zipCode" layoutX="559.0" layoutY="25.0"  text = ""/>
+                  <TextField fx:id="alternativeLanguage" layoutX="195.0" layoutY="25.0"  />
+                  <TextField fx:id="insurance" layoutX="377.0" layoutY="25.0"  />
+                  <CheckBox fx:id="publicTransportation" layoutX="500.0" layoutY="75.0" mnemonicParsing="false" text="Public Transportation" />
+                  <CheckBox fx:id="lgbtq" layoutX="30.0" layoutY="120.0" mnemonicParsing="false" text="LGBTQ" />
+                  <CheckBox fx:id="eveningHours" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" text="Evening Hours" />
+                  <CheckBox fx:id="weekendHours" layoutX="265.0" layoutY="75.0" mnemonicParsing="false" text="Weekend Hours" />
+                  <CheckBox fx:id="mobileTherapy" layoutX="500.0" layoutY="120.0" mnemonicParsing="false" text="Mobile Therapy" />
+                  <CheckBox fx:id="faithBased" layoutX="265.0" layoutY="120.0" mnemonicParsing="false" text="Faith Based" />
+  				  <CheckComboBox fx:id="providerType" layoutX="750.0" layoutY="17.0" prefWidth="150.0" opacity = "0" />
+                  <CheckComboBox fx:id="patientAge" layoutX="750.0" layoutY="73.0" prefWidth="150.0" opacity = "0" />
+                  <CheckComboBox fx:id="therapyType" layoutX="930.0" layoutY="17.0" prefWidth="150.0" opacity = "0" />
+                  <CheckComboBox fx:id="providerGrade" layoutX="930.0" layoutY="73.0" prefWidth="150.0" opacity = "0" />
+                  <ComboBox fx:id="travelRadius" layoutX="750.0" layoutY="129.0" prefWidth="150.0" opacity = "0" value = "Travel Radius"/>
+                  <CheckComboBox fx:id="service" layoutX="930" layoutY="129.0" prefWidth="150.0" opacity = "0" />
+                  <ComboBox fx:id="providerTypeUX" layoutX="750.0" layoutY="17.0" prefWidth="150.0" disable = "True" promptText="Provider Type" opacity = "1"/>
+                  <ComboBox fx:id="patientAgeUX" layoutX="750.0" layoutY="73.0" prefWidth="150.0" disable = "True" promptText="Patient Age" opacity = "1"/>
+                  <ComboBox fx:id="therapyTypeUX" layoutX="930" layoutY="17.0" prefWidth="150.0" disable = "True" opacity = "1" promptText="Therapy Type"/>
+                  <ComboBox fx:id="providerGradeUX" layoutX="930" layoutY="73.0" prefWidth="150.0" disable = "True" value="Provider Grade" opacity = "1"/>
+                  <ComboBox fx:id="travelRadiusUX" layoutX="750.0" layoutY="129.0" prefWidth="150.0" disable = "True" opacity = "1" value = "Travel Radius"/>
+                  <ComboBox fx:id="serviceUX" layoutX="930" layoutY="129.0" prefWidth="150.0" disable = "True" value="Service" opacity = "1"/>
+                  
+                  
+                  
+                  <Button fx:id="search" layoutX="1132.0" layoutY="24.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="60.0" prefWidth="150.0" text="Search">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  
+                  <Button fx:id="refresh" layoutX="1132.0" layoutY="95.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="60.0" prefWidth="150.0" text="Refresh">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="476.0" prefWidth="998.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="271.0" layoutY="-15.0" prefHeight="459.0" prefWidth="998.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="lastNameColumn" prefWidth="128.23152017593384" text="Last Name" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="113.2781982421875" text="First Name" />
+                        <TableColumn fx:id="degreeColumn" prefWidth="45.9149169921875" text="Degree" />
+                        <TableColumn fx:id="groupNameColumn" prefWidth="218.76547241210938" text="Group Name" />
+                        <TableColumn fx:id="insuranceColumn" prefWidth="471.2344970703125" text="Insurances" />
+                        <TableColumn fx:id="phoneNumberColumn" prefWidth="142.0" text="Phone Number" />
+                        <TableColumn fx:id="addressColumn" prefWidth="239.0" text="Address" />
+                        <TableColumn fx:id="cityColumn" prefWidth="128.0" text="City" />
+                        <TableColumn fx:id="zipColumn" prefWidth="60.0" text="Zip" />
+                        
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
